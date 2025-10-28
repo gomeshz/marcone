@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Website</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #000;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .logo {
+      width: 300px;
+      height: 100px;
+      background-image: url("https://i.ibb.co/vxFWN7Wf/marcone.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin: 20px auto;
+    }
+    .nav {
+      margin: 10px 0;
+      display: flex;
+      justify-content: center;
+    }
+    .nav .glow-on-hover {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #fff;
+      font-size: 18px;
+    }
+    .ads {
+      margin: 20px 0;
+      display: flex;
+      justify-content: center;
+    }
+    .ads a:first-child button {
+      width: 100px;
+      height: 100px;
+      background-image: url("https://i.ibb.co/7d62f6pV/content.png");
+      background-size: cover;
+      border: none;
+      cursor: pointer;
+      margin: 0 10px;
+      background-color: transparent;
+    }
+    .ads button {
+      padding: 10px 20px;
+      margin: 0 10px;
+      background-color: #ddd;
+      border: none;
+      cursor: pointer;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .content {
+      width: 60%;
+      height: 500px;
+      background-color: #bbb;
+      margin: 0 20px 0 0;
+      line-height: 500px;
+      font-size: 24px;
+      color: black;
+    }
+    .discord-widget {
+      width: 350px;
+      height: 500px;
+    }
+    .Retângulo_2 {
+      background-image: url("Retângulo 2.png");
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+    .footer {
+      margin-top: 20px;
+      padding: 10px 0;
+      background-color: transparent;
+      color: white;
+      width: 100%;
+      max-width: 1200px;
+      position: relative;
+      bottom: 0;
+    }
+    html {
+      height: 100%;
+    }
+
+    .glow-on-hover {
+        width: 220px;
+        height: 50px;
+        border: none;
+        outline: none;
+        color: #fff;
+        background: #111;
+        cursor: pointer;
+        position: relative;
+        z-index: 0;
+        border-radius: 10px;
+    }
+
+    .glow-on-hover:before {
+        content: '';
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        position: absolute;
+        top: -2px;
+        left:-2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing 20s linear infinite;
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+        border-radius: 10px;
+    }
+
+    .glow-on-hover:active {
+        color: #000
+    }
+
+    .glow-on-hover:active:after {
+        background: transparent;
+    }
+
+    .glow-on-hover:hover:before {
+        opacity: 1;
+    }
+
+    .glow-on-hover:after {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #111;
+        left: 0;
+        top: 0;
+        border-radius: 10px;
+    }
+
+    @keyframes glowing {
+        0% { background-position: 0 0; }
+        50% { background-position: 400% 0; }
+        100% { background-position: 0 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="Retângulo_2"></div>
+  <div class="logo"></div>
+  <div class="nav">
+    <button class="glow-on-hover" type="button">início</button>
+    <button class="glow-on-hover" type="button">sobre nós</button>
+    <button class="glow-on-hover" type="button">contato</button>
+  </div>
+  <div class="ads">
+    <a href="https://discord.gg/summergg"><button></button></a>
+    <button>anúncio</button>
+    <button>anúncio</button>
+  </div>
+  <div class="container">
+    <div class="content">conteudo em texto</div>
+    <div class="discord-widget">
+      <iframe src="https://discord.com/widget?id=1417146780260503672&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+    </div>
+  </div>
+  <div class="footer">
+    © 2025 Simple Website. All rights reserved.
+  </div>
+</body>
+</html>
